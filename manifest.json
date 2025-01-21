@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "icons": {
+        "128": "public/gulfofamericademo.png"
+    },
+    "name": "Rename Gulf of Mexico",
+    "version": "1.0",
+    "description": "Replace 'Gulf of Mexico' with 'Gulf of america' everywhere.",
+    "permissions": [
+        "scripting"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_start",
+            "css": [
+                "style.css"
+            ]
+        }
+    ]
+}
